@@ -8,11 +8,14 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @Data
 
-public class CustomerDto {
+
+
+public class BookingDto {
+    private String bookingId;
     private String customerId;
-    private String customerName;
-    private String contactNo;
-    private String address;
-    private String email;
-    private String adminId;
+    private String date;
+    private String time;
+    private String location;
+    private String bookingType;
+    private String bookingStatus;
 }

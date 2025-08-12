@@ -8,11 +8,20 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @Data
 
-public class CustomerEntity {
-    private String customerId;
-    private String customerName;
-    private String contactNo;
-    private String address;
-    private String email;
+public class AdminEntity {
     private String adminId;
+    private String name;
+    private String password;
+    private String role;
+    private String email;
 }
+
+
+
+
+
+
+
+
+
+

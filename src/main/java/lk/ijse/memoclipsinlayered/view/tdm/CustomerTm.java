@@ -1,5 +1,4 @@
-package lk.ijse.memoclipsinlayered.entity;
-
+package lk.ijse.memoclipsinlayered.view.tdm;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -8,7 +7,7 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @Data
 
-public class CustomerEntity {
+public class CustomerTm {
     private String customerId;
     private String customerName;
     private String contactNo;
@@ -16,3 +15,4 @@ public class CustomerEntity {
     private String email;
     private String adminId;
 }
+
