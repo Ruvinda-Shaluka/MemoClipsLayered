@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1000.0" prefWidth="1600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.memoclips.controller.DashBoardPageController">
+   <children>
+      <HBox layoutX="195.0" layoutY="200.0" prefHeight="100.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <VBox prefHeight="1001.0" prefWidth="348.0" style="-fx-background-color: FDB777;">
+               <children>
+                  <Button mnemonicParsing="false" onAction="#btnAdminOnAction" prefHeight="29.0" prefWidth="219.0" style="-fx-background-radius: 12px; -fx-border-radius: 12px; -fx-border-color: #000; -fx-border-width: 2;" text="Admin">
+                     <VBox.margin>
+                        <Insets bottom="27.0" left="39.0" right="12.0" top="42.0" />
+                     </VBox.margin>
+                     <graphic>
+                        <ImageView fitHeight="24.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/Admin%20sign%20on%20laptop%20icon%20–%20vector%20stock….jpeg" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button mnemonicParsing="false" onAction="#btnCustomerOnAction" prefHeight="29.0" prefWidth="222.0" style="-fx-background-radius: 12px; -fx-border-radius: 12px; -fx-border-color: #000; -fx-border-width: 2;" text="Customer">
+                     <VBox.margin>
+                        <Insets bottom="27.0" left="39.0" right="8.0" top="-10.0" />
+                     </VBox.margin>
+                     <graphic>
+                        <ImageView fitHeight="24.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/b777bddb-3c55-43ee-9630-82ac317bccf8.jpeg" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button mnemonicParsing="false" onAction="#btnAlbumDetailsOnAction" prefHeight="30.0" prefWidth="222.0" style="-fx-background-radius: 12px; -fx-border-radius: 12px; -fx-border-color: #000; -fx-border-width: 2;" text="Album Details">
+                     <VBox.margin>
+                        <Insets bottom="27.0" left="39.0" right="8.0" top="-16.0" />
+                     </VBox.margin>
+                     <graphic>
+                        <ImageView fitHeight="24.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/02c7209a-e075-43cf-be79-807b8ba0af48.jpeg" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button mnemonicParsing="false" onAction="#btnAssistantOnAction" prefHeight="29.0" prefWidth="222.0" style="-fx-background-radius: 12px; -fx-border-radius: 12px; -fx-border-color: #000; -fx-border-width: 2;" text="Assistant">
+                     <VBox.margin>
+                        <Insets bottom="27.0" left="39.0" right="8.0" top="-16.0" />
+                     </VBox.margin>
+                     <graphic>
+                        <ImageView fitHeight="25.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/Chatbot%20woman%20logo%20by%20ava_nauval%20for%20sale%20on…%20-%20Copy.jpeg" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button mnemonicParsing="false" onAction="#btnBookingsOnAction" prefHeight="29.0" prefWidth="222.0" style="-fx-background-radius: 12px; -fx-border-radius: 12px; -fx-border-color: #000; -fx-border-width: 2;" text="Bookings">
+                     <VBox.margin>
+                        <Insets bottom="27.0" left="39.0" right="8.0" top="-16.0" />
+                     </VBox.margin>
+                     <graphic>
+                        <ImageView fitHeight="25.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/ab76742d-7111-473f-b055-92135c75861d.jpeg" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button mnemonicParsing="false" onAction="#btnInvoiceOnAction" prefHeight="29.0" prefWidth="222.0" style="-fx-background-radius: 12px; -fx-border-radius: 12px; -fx-border-color: #000; -fx-border-width: 2;" text="Invoice">
+                     <VBox.margin>
+                        <Insets bottom="27.0" left="39.0" right="8.0" top="-16.0" />
+                     </VBox.margin>
+                     <graphic>
+                        <ImageView fitHeight="24.0" fitWidth="34.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/9e74d3ae-5b0a-4436-9dcd-462dee2a4ee3.jpeg" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button mnemonicParsing="false" onAction="#btnItemOnAction" prefHeight="29.0" prefWidth="222.0" style="-fx-background-radius: 12px; -fx-border-radius: 12px; -fx-border-color: #000; -fx-border-width: 2;" text="Item">
+                     <VBox.margin>
+                        <Insets bottom="27.0" left="39.0" right="8.0" top="-16.0" />
+                     </VBox.margin>
+                     <graphic>
+                        <ImageView fitHeight="25.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/4ea762a9-7871-4ccc-ba01-a0306d3033bf.jpeg" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button mnemonicParsing="false" onAction="#btnpaymentOnAction" prefHeight="29.0" prefWidth="222.0" style="-fx-background-radius: 12px; -fx-border-radius: 12px; -fx-border-color: #000; -fx-border-width: 2;" text="Payment">
+                     <VBox.margin>
+                        <Insets bottom="27.0" left="39.0" right="8.0" top="-16.0" />
+                     </VBox.margin>
+                     <graphic>
+                        <ImageView fitHeight="25.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/Vector%20cash%20icon%20design%20illustration%20vec….jpeg" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button mnemonicParsing="false" onAction="#btnPhotoSessionOnAction" prefHeight="29.0" prefWidth="222.0" style="-fx-background-radius: 12px; -fx-border-radius: 12px; -fx-border-color: #000; -fx-border-width: 2;" text="Photo Session">
+                     <VBox.margin>
+                        <Insets bottom="27.0" left="39.0" right="8.0" top="-16.0" />
+                     </VBox.margin>
+                     <graphic>
+                        <ImageView fitHeight="25.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/c029a5b3-3827-4742-a073-db2b42302e20.jpeg" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button mnemonicParsing="false" onAction="#btnPhotoStorageOnAction" prefHeight="29.0" prefWidth="222.0" style="-fx-background-radius: 12px; -fx-border-radius: 12px; -fx-border-color: #000; -fx-border-width: 2;" text="Photo Storage">
+                     <VBox.margin>
+                        <Insets bottom="27.0" left="39.0" right="8.0" top="-16.0" />
+                     </VBox.margin>
+                     <graphic>
+                        <ImageView fitHeight="25.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/storage%20box,box%20icon,storage….jpeg" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button mnemonicParsing="false" onAction="#btnphotoAlbumOnAction" prefHeight="29.0" prefWidth="222.0" style="-fx-background-radius: 12px; -fx-border-radius: 12px; -fx-border-color: #000; -fx-border-width: 2;" text="photo Album">
+                     <VBox.margin>
+                        <Insets bottom="27.0" left="39.0" right="8.0" top="-16.0" />
+                     </VBox.margin>
+                     <graphic>
+                        <ImageView fitHeight="25.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/Camera%20Book%20Logo%20Template%20Vector,%20%23Vector,%20%23ad….jpeg" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button mnemonicParsing="false" onAction="#btnPhotographerOnAction" prefHeight="29.0" prefWidth="222.0" style="-fx-background-radius: 12px; -fx-border-radius: 12px; -fx-border-color: #000; -fx-border-width: 2;" text="photographer">
+                     <VBox.margin>
+                        <Insets bottom="27.0" left="39.0" right="8.0" top="-16.0" />
+                     </VBox.margin>
+                     <graphic>
+                        <ImageView fitHeight="25.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/logo%20man%20with%20hat%20and%20photo%20camera.jpeg" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button mnemonicParsing="false" onAction="#btnSupplierOnAction" prefHeight="29.0" prefWidth="222.0" style="-fx-background-radius: 12px; -fx-border-radius: 12px; -fx-border-color: #000; -fx-border-width: 2;" text="Supplier">
+                     <VBox.margin>
+                        <Insets bottom="27.0" left="39.0" right="8.0" top="-16.0" />
+                     </VBox.margin>
+                     <graphic>
+                        <ImageView fitHeight="25.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/f483d47f-6b03-48e5-ad3e-947f6a62b258.jpeg" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button mnemonicParsing="false" onAction="#btnVideoSessionOnAction" prefHeight="29.0" prefWidth="222.0" style="-fx-background-radius: 12px; -fx-border-radius: 12px; -fx-border-color: #000; -fx-border-width: 2;" text="Video Session">
+                     <VBox.margin>
+                        <Insets bottom="27.0" left="39.0" right="8.0" top="-16.0" />
+                     </VBox.margin>
+                     <graphic>
+                        <ImageView fitHeight="25.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/b6083a0f-2ea1-4963-9e63-15e2c4eef7b7.jpeg" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button mnemonicParsing="false" onAction="#btnVideographerOnAction" prefHeight="29.0" prefWidth="222.0" style="-fx-background-radius: 12px; -fx-border-radius: 12px; -fx-border-color: #000; -fx-border-width: 2;" text="Videographer">
+                     <VBox.margin>
+                        <Insets bottom="27.0" left="39.0" right="8.0" top="-16.0" />
+                     </VBox.margin>
+                     <graphic>
+                        <ImageView fitHeight="25.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/videographer.jpeg" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" />
+               </children>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <HBox.margin>
+                  <Insets right="-6.0" top="-3.0" />
+               </HBox.margin>
+            </VBox>
+            <AnchorPane fx:id="ancDashboard" prefHeight="854.0" prefWidth="1298.0" style="-fx-background-color: #e1d9ea;">
+               <children>
+                  <VBox layoutX="-1.0" layoutY="1.0" prefHeight="998.0" prefWidth="1278.0">
+                     <children>
+                        <BorderPane prefHeight="200.0" prefWidth="1280.0">
+                           <VBox.margin>
+                              <Insets top="300.0" />
+                           </VBox.margin>
+                           <center>
+                              <Label prefHeight="142.0" prefWidth="601.0" text="Memoclips.lk" textFill="#b94a36" BorderPane.alignment="CENTER">
+                                 <font>
+                                    <Font name="Impact" size="96.0" />
+                                 </font>
+                              </Label>
+                           </center>
+                        </BorderPane>
+                        <BorderPane prefHeight="200.0" prefWidth="1280.0">
+                           <center>
+                              <Label prefHeight="142.0" prefWidth="805.0" text="Sinceraly For You..." textFill="#7e7371" BorderPane.alignment="CENTER">
+                                 <font>
+                                    <Font name="Impact" size="96.0" />
+                                 </font>
+                              </Label>
+                           </center>
+                        </BorderPane>
+                     </children>
+                  </VBox>
+               </children></AnchorPane>
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>
