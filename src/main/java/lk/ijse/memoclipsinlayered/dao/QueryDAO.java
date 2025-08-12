@@ -1,4 +1,4 @@
 package lk.ijse.memoclipsinlayered.dao;
 
-public interface QueryDAO {
+public interface QueryDAO extends SuperDAO {
 }

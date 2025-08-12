@@ -2,5 +2,5 @@ package lk.ijse.memoclipsinlayered.dao.custom;
 
 import lk.ijse.memoclipsinlayered.dao.CrudDAO;
 
-public interface CustomerDAO extends CrudDAO {
+public interface PhotoStorageDAO extends CrudDAO {
 }
