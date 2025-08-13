@@ -15,4 +15,6 @@ public interface BookingBO extends SuperBO {
     public boolean deleteBooking(String id) throws SQLException, ClassNotFoundException;
     public String generateNewBookingId() throws SQLException, ClassNotFoundException;
     public ArrayList<BookingDto> searchBooking(String id) throws SQLException, ClassNotFoundException;
+
+    boolean placeBooking(BookingDto bookingDto);
 }

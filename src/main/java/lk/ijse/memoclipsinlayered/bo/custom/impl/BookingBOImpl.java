@@ -89,4 +89,9 @@ public class BookingBOImpl implements BookingBO {
         }
         return bookingDtos;
     }
+
+    @Override
+    public boolean placeBooking(BookingDto bookingDto) {
+        return false;
+    }
 }
