@@ -12,7 +12,7 @@ import java.util.ArrayList;
 public class VideographerBOImpl implements VideographerBO {
     VideographerDAO videographerDAO = (VideographerDAO) DAOFactory.getInstance().getSuperDAO(DAOFactory.DAOTypes.VIDEOGRAPHER);
     @Override
-    public ArrayList<VideographerDto> getAllBooking() throws SQLException, ClassNotFoundException {
+    public ArrayList<VideographerDto> getAllVideographer() throws SQLException, ClassNotFoundException {
         ArrayList<VideographerEntity> entities = videographerDAO.getAll();
         ArrayList<VideographerDto> videographerDtos = new ArrayList<>();
         for (VideographerEntity entity : entities) {
@@ -27,7 +27,7 @@ public class VideographerBOImpl implements VideographerBO {
     }
 
     @Override
-    public boolean saveBooking(VideographerDto videographerDto) throws SQLException, ClassNotFoundException {
+    public boolean saveVideographer(VideographerDto videographerDto) throws SQLException, ClassNotFoundException {
         return videographerDAO.save(new VideographerEntity(
                 videographerDto.getVideographerId(),
                 videographerDto.getName(),
@@ -37,7 +37,7 @@ public class VideographerBOImpl implements VideographerBO {
     }
 
     @Override
-    public boolean updateBooking(VideographerDto videographerDto) throws SQLException, ClassNotFoundException {
+    public boolean updateVideographer(VideographerDto videographerDto) throws SQLException, ClassNotFoundException {
         return videographerDAO.update(new VideographerEntity(
                 videographerDto.getVideographerId(),
                 videographerDto.getName(),
@@ -47,22 +47,22 @@ public class VideographerBOImpl implements VideographerBO {
     }
 
     @Override
-    public boolean existBooking(String id) throws SQLException, ClassNotFoundException {
+    public boolean existVideographer(String id) throws SQLException, ClassNotFoundException {
         return videographerDAO.exist(id);
     }
 
     @Override
-    public boolean deleteBooking(String id) throws SQLException, ClassNotFoundException {
+    public boolean deleteVideographer(String id) throws SQLException, ClassNotFoundException {
         return videographerDAO.delete(id);
     }
 
     @Override
-    public String generateNewBookingId() throws SQLException, ClassNotFoundException {
+    public String generateNewVideographerId() throws SQLException, ClassNotFoundException {
         return videographerDAO.generateNewId();
     }
 
     @Override
-    public ArrayList<VideographerDto> searchBooking(String id) throws SQLException, ClassNotFoundException {
+    public ArrayList<VideographerDto> searchVideographer(String id) throws SQLException, ClassNotFoundException {
         ArrayList<VideographerEntity> entities = videographerDAO.search(id);
         ArrayList<VideographerDto> videographerDtos = new ArrayList<>();
         for (VideographerEntity entity : entities) {
