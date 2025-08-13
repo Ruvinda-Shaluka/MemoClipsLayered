@@ -10,7 +10,7 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 
 public class InvoiceDAOImpl implements InvoiceDAO {
-
+    @Override
     public boolean save(InvoiceEntity dto) throws SQLException, ClassNotFoundException {
         return SQLUtil.executeUpdate(
                 "INSERT INTO Invoice (invoiceId, bookingId, amount, dueDate, paymentStatus) VALUES (?, ?, ?, ?, ?)",
@@ -21,7 +21,7 @@ public class InvoiceDAOImpl implements InvoiceDAO {
                 dto.getPaymentStatus()
         );
     }
-
+    @Override
     public boolean update(InvoiceEntity dto) throws SQLException, ClassNotFoundException {
         return SQLUtil.executeUpdate(
                 "UPDATE Invoice SET bookingId = ?, amount = ?, dueDate = ?, paymentStatus = ? WHERE invoiceId = ?",
@@ -37,11 +37,11 @@ public class InvoiceDAOImpl implements InvoiceDAO {
     public boolean exist(String id) throws SQLException, ClassNotFoundException {
         return false;
     }
-
+    @Override
     public boolean delete(String invoiceId) throws SQLException, ClassNotFoundException {
         return SQLUtil.executeUpdate("DELETE FROM Invoice WHERE invoiceId = ?", invoiceId);
     }
-
+    @Override
     public ArrayList<InvoiceEntity> search(String invoiceId) throws SQLException, ClassNotFoundException {
         ResultSet rs = SQLUtil.executeQuery("SELECT * FROM Invoice WHERE invoiceId = ?", invoiceId);
         ArrayList<InvoiceEntity> list = new ArrayList<>();
@@ -56,7 +56,7 @@ public class InvoiceDAOImpl implements InvoiceDAO {
         }
         return list;
     }
-
+    @Override
     public ArrayList<InvoiceEntity> getAll() throws SQLException, ClassNotFoundException {
         ResultSet rs = SQLUtil.executeQuery("SELECT * FROM Invoice");
         ArrayList<InvoiceEntity> list = new ArrayList<>();
@@ -73,7 +73,7 @@ public class InvoiceDAOImpl implements InvoiceDAO {
 
         return list;
     }
-
+    @Override
     public String generateNewId() throws SQLException, ClassNotFoundException {
         ResultSet rs = SQLUtil.executeQuery("SELECT invoiceId FROM Invoice ORDER BY invoiceId DESC LIMIT 1");
         String prefix = "INV";

@@ -9,7 +9,7 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 
 public class ItemDAOImpl implements ItemDAO {
-
+    @Override
     public boolean save(ItemEntity dto) throws SQLException, ClassNotFoundException {
         return SQLUtil.executeUpdate(
                 "INSERT INTO item (itemId, name, quantity, lastUpdateDate, supplierId) VALUES (?, ?, ?, ?, ?)",
@@ -20,7 +20,7 @@ public class ItemDAOImpl implements ItemDAO {
                 dto.getSupplierId()
         );
     }
-
+    @Override
     public boolean update(ItemEntity dto) throws SQLException, ClassNotFoundException {
         return SQLUtil.executeUpdate(
                 "UPDATE item SET name = ?, quantity = ?, lastUpdateDate = ?, supplierId = ? WHERE itemId = ?",
@@ -36,11 +36,11 @@ public class ItemDAOImpl implements ItemDAO {
     public boolean exist(String id) throws SQLException, ClassNotFoundException {
         return false;
     }
-
+    @Override
     public boolean delete(String itemId) throws SQLException, ClassNotFoundException {
         return SQLUtil.executeUpdate("DELETE FROM item WHERE itemId = ?", itemId);
     }
-
+    @Override
     public ArrayList<ItemEntity> search(String itemId) throws SQLException, ClassNotFoundException {
         ResultSet rs = SQLUtil.executeQuery("SELECT * FROM item WHERE item_id = ?", itemId);
         ArrayList<ItemEntity> list = new ArrayList<>();
@@ -55,7 +55,7 @@ public class ItemDAOImpl implements ItemDAO {
         }
         return list;
     }
-
+    @Override
     public ArrayList<ItemEntity> getAll() throws SQLException, ClassNotFoundException {
         ResultSet rs = SQLUtil.executeQuery("SELECT * FROM item");
         ArrayList<ItemEntity> list = new ArrayList<>();
@@ -70,7 +70,7 @@ public class ItemDAOImpl implements ItemDAO {
         }
         return list;
     }
-
+    @Override
     public String generateNewId() throws SQLException, ClassNotFoundException {
         ResultSet rs = SQLUtil.executeQuery("SELECT itemId FROM item ORDER BY itemId DESC LIMIT 1");
         String prefix = "ITM";

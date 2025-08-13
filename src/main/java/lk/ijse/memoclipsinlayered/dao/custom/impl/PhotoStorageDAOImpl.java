@@ -9,7 +9,7 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 
 public class PhotoStorageDAOImpl implements PhotoStorageDAO {
-
+    @Override
     public boolean save(PhotoStorageEntity dto) throws SQLException, ClassNotFoundException {
         return SQLUtil.executeUpdate(
                 "INSERT INTO PhotoStorage (photoId, sessionId, uploadDate, uploadTime) VALUES (?, ?, ?, ?)",
@@ -19,7 +19,7 @@ public class PhotoStorageDAOImpl implements PhotoStorageDAO {
                 dto.getUploadTime()
         );
     }
-
+    @Override
     public boolean update(PhotoStorageEntity dto) throws SQLException, ClassNotFoundException {
         return SQLUtil.executeUpdate(
                 "UPDATE PhotoStorage SET sessionId = ?, uploadDate = ?, uploadTime = ? WHERE photoId = ?",
@@ -34,11 +34,11 @@ public class PhotoStorageDAOImpl implements PhotoStorageDAO {
     public boolean exist(String id) throws SQLException, ClassNotFoundException {
         return false;
     }
-
+    @Override
     public boolean delete(String photoId) throws SQLException, ClassNotFoundException {
         return SQLUtil.executeUpdate("DELETE FROM PhotoStorage WHERE photoId = ?", photoId);
     }
-
+    @Override
     public ArrayList<PhotoStorageEntity> search(String photoId) throws SQLException, ClassNotFoundException {
         ResultSet rs = SQLUtil.executeQuery("SELECT * FROM PhotoStorage WHERE photoId = ?", photoId);
         ArrayList<PhotoStorageEntity> list = new ArrayList<>();
@@ -52,7 +52,7 @@ public class PhotoStorageDAOImpl implements PhotoStorageDAO {
         }
         return list;
     }
-
+    @Override
     public ArrayList<PhotoStorageEntity> getAll() throws SQLException, ClassNotFoundException {
         ResultSet rs = SQLUtil.executeQuery("SELECT * FROM PhotoStorage");
         ArrayList<PhotoStorageEntity> list = new ArrayList<>();
@@ -66,7 +66,7 @@ public class PhotoStorageDAOImpl implements PhotoStorageDAO {
         }
         return list;
     }
-
+    @Override
     public String generateNewId() throws SQLException, ClassNotFoundException {
         ResultSet rs = SQLUtil.executeQuery("SELECT photoId FROM PhotoStorage ORDER BY photoId DESC LIMIT 1");
         String prefix = "PHO";

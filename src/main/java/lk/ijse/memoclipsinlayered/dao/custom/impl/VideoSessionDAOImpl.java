@@ -9,7 +9,7 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 
 public class VideoSessionDAOImpl implements VideoSessionDAO {
-
+    @Override
     public boolean save(VideoSessionEntity dto) throws SQLException, ClassNotFoundException {
         return SQLUtil.executeUpdate(
                 "INSERT INTO videoSessions (videoId, bookingId, videographerId, duration, format) VALUES (?, ?, ?, ?, ?)",
@@ -20,7 +20,7 @@ public class VideoSessionDAOImpl implements VideoSessionDAO {
                 dto.getFormat()
         );
     }
-
+    @Override
     public boolean update(VideoSessionEntity dto) throws SQLException, ClassNotFoundException {
         return SQLUtil.executeUpdate(
                 "UPDATE videoSessions SET bookingId = ?, videographerId = ?, duration = ?, format = ? WHERE videoId = ?",
@@ -36,11 +36,11 @@ public class VideoSessionDAOImpl implements VideoSessionDAO {
     public boolean exist(String id) throws SQLException, ClassNotFoundException {
         return false;
     }
-
+    @Override
     public boolean delete(String id) throws SQLException, ClassNotFoundException {
         return SQLUtil.executeUpdate("DELETE FROM videoSessions WHERE videoId = ?", id);
     }
-
+    @Override
     public ArrayList<VideoSessionEntity> search(String id) throws SQLException, ClassNotFoundException {
         ResultSet rs = SQLUtil.executeQuery("SELECT * FROM videoSessions WHERE videoId = ?", id);
         ArrayList<VideoSessionEntity> list = new ArrayList<>();
@@ -55,7 +55,7 @@ public class VideoSessionDAOImpl implements VideoSessionDAO {
         }
         return list;
     }
-
+    @Override
     public ArrayList<VideoSessionEntity> getAll() throws SQLException, ClassNotFoundException {
         ResultSet rs = SQLUtil.executeQuery("SELECT * FROM videosessions");
         ArrayList<VideoSessionEntity> list = new ArrayList<>();
@@ -83,7 +83,7 @@ public class VideoSessionDAOImpl implements VideoSessionDAO {
         }
         return prefix + "001";
     }*/
-
+    @Override
     public String generateNewId() throws SQLException , ClassNotFoundException{
         ResultSet resultSet = SQLUtil.executeQuery("SELECT videoId FROM videosessions ORDER BY videoId DESC LIMIT 1");
         String  tableCharacter = "VIDS";

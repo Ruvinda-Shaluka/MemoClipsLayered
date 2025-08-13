@@ -9,7 +9,7 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 
 public class PhotographerDAOImpl implements PhotographerDAO {
-
+    @Override
     public boolean save(PhotographerEntity dto) throws SQLException, ClassNotFoundException {
         return SQLUtil.executeUpdate(
                 "INSERT INTO photographer (photographerId, name, speciality, contact, availability) VALUES (?, ?, ?, ?, ?)",
@@ -20,7 +20,7 @@ public class PhotographerDAOImpl implements PhotographerDAO {
                 dto.getAvailability()
         );
     }
-
+    @Override
     public boolean update(PhotographerEntity dto) throws SQLException, ClassNotFoundException {
         return SQLUtil.executeUpdate(
                 "UPDATE photographer SET name = ?, speciality = ?, contact = ?, availability = ? WHERE photographerId = ?",
@@ -36,11 +36,11 @@ public class PhotographerDAOImpl implements PhotographerDAO {
     public boolean exist(String id) throws SQLException, ClassNotFoundException {
         return false;
     }
-
+    @Override
     public boolean delete(String photographerId) throws SQLException, ClassNotFoundException {
         return SQLUtil.executeUpdate("DELETE FROM photographer WHERE photographerId = ?", photographerId);
     }
-
+    @Override
     public ArrayList<PhotographerEntity> search(String photographerId) throws SQLException, ClassNotFoundException {
         ResultSet rs = SQLUtil.executeQuery("SELECT * FROM photographer WHERE photographerId = ?", photographerId);
         ArrayList<PhotographerEntity> list = new ArrayList<>();
@@ -55,7 +55,7 @@ public class PhotographerDAOImpl implements PhotographerDAO {
         }
         return list;
     }
-
+    @Override
     public ArrayList<PhotographerEntity> getAll() throws SQLException, ClassNotFoundException {
         ResultSet rs = SQLUtil.executeQuery("SELECT * FROM photographer");
         ArrayList<PhotographerEntity> list = new ArrayList<>();
@@ -70,7 +70,7 @@ public class PhotographerDAOImpl implements PhotographerDAO {
         }
         return list;
     }
-
+    @Override
     public String generateNewId() throws SQLException, ClassNotFoundException {
         ResultSet rs = SQLUtil.executeQuery("SELECT photographerId FROM photographer ORDER BY photographerId DESC LIMIT 1");
         String prefix = "PHO";

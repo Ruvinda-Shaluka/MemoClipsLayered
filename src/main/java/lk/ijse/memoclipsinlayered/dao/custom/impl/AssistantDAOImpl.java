@@ -9,7 +9,7 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 
 public class AssistantDAOImpl implements AssistantDAO {
-
+    @Override
     public boolean save(AssistantEntity dto) throws SQLException, ClassNotFoundException {
         return SQLUtil.executeUpdate(
                 "INSERT INTO Assistant (assistantId, photographerId, name, availability) VALUES (?, ?, ?, ?)",
@@ -19,7 +19,7 @@ public class AssistantDAOImpl implements AssistantDAO {
                 dto.getAvailability()
         );
     }
-
+    @Override
     public boolean update(AssistantEntity dto) throws SQLException, ClassNotFoundException {
         return SQLUtil.executeUpdate(
                 "UPDATE Assistant SET photographerId = ?, name = ?, availability = ? WHERE assistantId = ?",
@@ -34,14 +34,14 @@ public class AssistantDAOImpl implements AssistantDAO {
     public boolean exist(String id) throws SQLException, ClassNotFoundException {
         return false;
     }
-
+    @Override
     public boolean delete(String id) throws SQLException, ClassNotFoundException {
         return SQLUtil.executeUpdate(
                 "DELETE FROM Assistant WHERE assistantId = ?",
                 id
         );
     }
-
+    @Override
     public ArrayList<AssistantEntity> search(String id) throws SQLException, ClassNotFoundException {
         ResultSet rs = SQLUtil.executeQuery(
                 "SELECT * FROM Assistant WHERE assistantId = ?",
@@ -59,7 +59,7 @@ public class AssistantDAOImpl implements AssistantDAO {
         }
         return list;
     }
-
+    @Override
     public ArrayList<AssistantEntity> getAll() throws SQLException, ClassNotFoundException {
         ResultSet rs = SQLUtil.executeQuery("SELECT * FROM Assistant");
         ArrayList<AssistantEntity> list = new ArrayList<>();
@@ -75,7 +75,7 @@ public class AssistantDAOImpl implements AssistantDAO {
 
         return list;
     }
-
+    @Override
     public String generateNewId() throws SQLException, ClassNotFoundException {
         ResultSet rs = SQLUtil.executeQuery("SELECT assistantId FROM Assistant ORDER BY assistantId DESC LIMIT 1");
         if (rs.next()) {

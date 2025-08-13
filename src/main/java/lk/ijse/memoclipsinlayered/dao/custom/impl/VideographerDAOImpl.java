@@ -9,7 +9,7 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 
 public class VideographerDAOImpl implements VideographerDAO {
-
+    @Override
     public boolean save(VideographerEntity dto) throws SQLException, ClassNotFoundException {
         return SQLUtil.executeUpdate(
                 "INSERT INTO Videographer (videographerId, name, contact, availability) VALUES (?, ?, ?, ?)",
@@ -19,7 +19,7 @@ public class VideographerDAOImpl implements VideographerDAO {
                 dto.getAvailability()
         );
     }
-
+    @Override
     public boolean update(VideographerEntity dto) throws SQLException, ClassNotFoundException {
         return SQLUtil.executeUpdate(
                 "UPDATE Videographer SET name = ?, contact = ?, availability = ? WHERE videographerId = ?",
@@ -34,11 +34,11 @@ public class VideographerDAOImpl implements VideographerDAO {
     public boolean exist(String id) throws SQLException, ClassNotFoundException {
         return false;
     }
-
+    @Override
     public boolean delete(String id) throws SQLException, ClassNotFoundException {
         return SQLUtil.executeUpdate("DELETE FROM Videographer WHERE videographerId = ?", id);
     }
-
+    @Override
     public ArrayList<VideographerEntity> search(String id) throws SQLException, ClassNotFoundException {
         ResultSet rs =SQLUtil.executeQuery("SELECT * FROM Videographer WHERE videographerId = ?", id);
         ArrayList<VideographerEntity> list = new ArrayList<>();
@@ -52,7 +52,7 @@ public class VideographerDAOImpl implements VideographerDAO {
         }
         return list;
     }
-
+    @Override
     public ArrayList<VideographerEntity> getAll() throws SQLException, ClassNotFoundException {
         ResultSet rs = SQLUtil.executeQuery("SELECT * FROM Videographer");
         ArrayList<VideographerEntity> list = new ArrayList<>();
@@ -66,7 +66,7 @@ public class VideographerDAOImpl implements VideographerDAO {
         }
         return list;
     }
-
+    @Override
     public String generateNewId() throws SQLException, ClassNotFoundException {
         ResultSet rs = SQLUtil.executeQuery("SELECT videographerId FROM Videographer ORDER BY videographerId DESC LIMIT 1");
         String prefix = "VID";

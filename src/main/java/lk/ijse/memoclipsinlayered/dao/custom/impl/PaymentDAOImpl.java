@@ -9,7 +9,7 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 
 public class PaymentDAOImpl implements PaymentDAO {
-
+    @Override
     public boolean save(PaymentEntity dto) throws SQLException, ClassNotFoundException {
         return SQLUtil.executeUpdate(
                 "INSERT INTO Payment (paymentId, invoiceId, amountPaid, paymentDate, paymentMethod) VALUES (?, ?, ?, ?, ?)",
@@ -20,7 +20,7 @@ public class PaymentDAOImpl implements PaymentDAO {
                 dto.getPaymentMethod()
         );
     }
-
+    @Override
     public boolean update(PaymentEntity dto) throws SQLException, ClassNotFoundException {
         return SQLUtil.executeUpdate(
                 "UPDATE payments SET invoiceId = ?, amountPaid = ?, paymentDate = ?, paymentMethod = ? WHERE paymentId = ?",
@@ -40,7 +40,7 @@ public class PaymentDAOImpl implements PaymentDAO {
     public boolean delete(String paymentId) throws SQLException, ClassNotFoundException {
         return SQLUtil.executeUpdate("DELETE FROM payment WHERE paymentId = ?", paymentId);
     }
-
+    @Override
     public ArrayList<PaymentEntity> search(String paymentId) throws SQLException, ClassNotFoundException {
         ResultSet rs = SQLUtil.executeQuery("SELECT * FROM payment WHERE paymentId = ?", paymentId);
         ArrayList<PaymentEntity> list = new ArrayList<>();
@@ -55,7 +55,7 @@ public class PaymentDAOImpl implements PaymentDAO {
         }
         return list;
     }
-
+    @Override
     public ArrayList<PaymentEntity> getAll() throws SQLException, ClassNotFoundException {
         ResultSet rs = SQLUtil.executeQuery("SELECT * FROM Payments");
         ArrayList<PaymentEntity> list = new ArrayList<>();
@@ -70,7 +70,7 @@ public class PaymentDAOImpl implements PaymentDAO {
         }
         return list;
     }
-
+    @Override
     public String generateNewId() throws SQLException, ClassNotFoundException {
         ResultSet rs = SQLUtil.executeQuery("SELECT paymentId FROM payments ORDER BY paymentId DESC LIMIT 1");
         String prefix = "PAY";

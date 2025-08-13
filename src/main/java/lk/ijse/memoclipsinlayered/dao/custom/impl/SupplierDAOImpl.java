@@ -9,7 +9,7 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 
 public class SupplierDAOImpl implements SupplierDAO {
-
+    @Override
     public boolean save(SupplierEntity dto) throws SQLException, ClassNotFoundException {
         return SQLUtil.executeUpdate(
                 "INSERT INTO Supplier (supplierId, name, contact, supplyQuantity) VALUES (?, ?, ?, ?)",
@@ -19,7 +19,7 @@ public class SupplierDAOImpl implements SupplierDAO {
                 dto.getSupplyQuantity()
         );
     }
-
+    @Override
     public boolean update(SupplierEntity dto) throws SQLException, ClassNotFoundException {
         return SQLUtil.executeUpdate(
                 "UPDATE Supplier SET name = ?, contact = ?, supplyQuantity = ? WHERE supplierId = ?",
@@ -34,11 +34,11 @@ public class SupplierDAOImpl implements SupplierDAO {
     public boolean exist(String id) throws SQLException, ClassNotFoundException {
         return false;
     }
-
+    @Override
     public boolean delete(String supplierId) throws SQLException, ClassNotFoundException {
         return SQLUtil.executeUpdate("DELETE FROM Supplier WHERE supplierId = ?", supplierId);
     }
-
+    @Override
     public ArrayList<SupplierEntity> search(String supplierId) throws SQLException, ClassNotFoundException {
         ResultSet rs = SQLUtil.executeQuery("SELECT * FROM Supplier WHERE supplierId = ?", supplierId);
         ArrayList<SupplierEntity> list = new ArrayList<>();
@@ -52,7 +52,7 @@ public class SupplierDAOImpl implements SupplierDAO {
         }
         return list;
     }
-
+    @Override
     public ArrayList<SupplierEntity> getAll() throws SQLException, ClassNotFoundException {
         ResultSet rs = SQLUtil.executeQuery("SELECT * FROM Supplier");
         ArrayList<SupplierEntity> list = new ArrayList<>();
@@ -66,7 +66,7 @@ public class SupplierDAOImpl implements SupplierDAO {
         }
         return list;
     }
-
+    @Override
     public String generateNewId() throws SQLException, ClassNotFoundException {
         ResultSet rs = SQLUtil.executeQuery("SELECT supplierId FROM Supplier ORDER BY supplierId DESC LIMIT 1");
         String prefix = "SUP";

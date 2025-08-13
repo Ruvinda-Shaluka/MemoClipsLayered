@@ -9,7 +9,7 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 
 public class PhotoAlbumDAOImpl implements PhotoAlbumDAO {
-
+    @Override
     public boolean save(PhotoAlbumEntity dto) throws SQLException, ClassNotFoundException {
         return SQLUtil.executeUpdate(
                 "INSERT INTO Photo_album (albumId, bookingId, albumType, price) VALUES (?, ?, ?, ?)",
@@ -19,7 +19,7 @@ public class PhotoAlbumDAOImpl implements PhotoAlbumDAO {
                 dto.getPrice()
         );
     }
-
+    @Override
     public boolean update(PhotoAlbumEntity dto) throws SQLException, ClassNotFoundException {
         return SQLUtil.executeUpdate(
                 "UPDATE Photo_album SET bookingId = ?, albumType = ?, price = ? WHERE albumId = ?",
@@ -34,11 +34,11 @@ public class PhotoAlbumDAOImpl implements PhotoAlbumDAO {
     public boolean exist(String id) throws SQLException, ClassNotFoundException {
         return false;
     }
-
+    @Override
     public boolean delete(String albumId) throws SQLException, ClassNotFoundException {
         return SQLUtil.executeUpdate("DELETE FROM Photo_album WHERE albumId = ?", albumId);
     }
-
+    @Override
     public ArrayList<PhotoAlbumEntity> search(String albumId) throws SQLException, ClassNotFoundException {
         ResultSet rs = SQLUtil.executeQuery("SELECT * FROM Photo_album WHERE albumId = ?", albumId);
         ArrayList<PhotoAlbumEntity> list = new ArrayList<>();
@@ -52,7 +52,7 @@ public class PhotoAlbumDAOImpl implements PhotoAlbumDAO {
         }
         return list;
     }
-
+    @Override
     public ArrayList<PhotoAlbumEntity> getAll() throws SQLException, ClassNotFoundException {
         ResultSet rs = SQLUtil.executeQuery("SELECT * FROM Photo_album");
         ArrayList<PhotoAlbumEntity> list = new ArrayList<>();
@@ -66,7 +66,7 @@ public class PhotoAlbumDAOImpl implements PhotoAlbumDAO {
         }
         return list;
     }
-
+    @Override
     public String generateNewId() throws SQLException, ClassNotFoundException {
         ResultSet rs = SQLUtil.executeQuery("SELECT albumId FROM Photo_album ORDER BY albumId DESC LIMIT 1");
         String prefix = "ALB";
