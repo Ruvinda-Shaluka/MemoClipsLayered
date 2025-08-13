@@ -25,7 +25,7 @@ public class AssistantBOImpl implements AssistantBO {
             ));
         }
 
-        return null;
+        return assistantDtos;
     }
 
     @Override
@@ -50,17 +50,17 @@ public class AssistantBOImpl implements AssistantBO {
 
     @Override
     public boolean existAssistant(String id) throws SQLException, ClassNotFoundException {
-        return false;
+        return assistantDAO.exist(id);
     }
 
     @Override
     public boolean deleteAssistant(String id) throws SQLException, ClassNotFoundException {
-        return false;
+        return assistantDAO.delete(id);
     }
 
     @Override
     public String generateNewAssistantId() throws SQLException, ClassNotFoundException {
-        return "";
+        return assistantDAO.generateNewId();
     }
 
     @Override

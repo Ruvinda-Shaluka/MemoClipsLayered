@@ -59,17 +59,17 @@ public class BookingBOImpl implements BookingBO {
 
     @Override
     public boolean existBooking(String id) throws SQLException, ClassNotFoundException {
-        return false;
+        return bookingDAO.exist(id);
     }
 
     @Override
     public boolean deleteBooking(String id) throws SQLException, ClassNotFoundException {
-        return false;
+        return bookingDAO.delete(id);
     }
 
     @Override
     public String generateNewBookingId() throws SQLException, ClassNotFoundException {
-        return "";
+        return bookingDAO.generateNewId();
     }
 
     @Override

@@ -57,17 +57,17 @@ public class AlbumDetailBOImpl implements AlbumDetailsBO {
 
     @Override
     public boolean existAlbumDetails(String id) throws SQLException, ClassNotFoundException {
-        return false;
+        return albumDetailsDAO.exist(id);
     }
 
     @Override
     public boolean deleteAlbumDetails(String id) throws SQLException, ClassNotFoundException {
-        return false;
+        return albumDetailsDAO.delete(id);
     }
 
     @Override
     public String generateNewAlbumDetailsId() throws SQLException, ClassNotFoundException {
-        return "";
+        return albumDetailsDAO.generateNewId();
     }
 
     @Override
