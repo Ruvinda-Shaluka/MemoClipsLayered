@@ -1,5 +1,6 @@
 package lk.ijse.memoclipsinlayered.bo;
 
+import lk.ijse.memoclipsinlayered.bo.custom.impl.*;
 
 public class BOFactory {
     private static BOFactory boFactory;
@@ -18,52 +19,50 @@ public class BOFactory {
     public SuperBO getSuperBO(BOTypes boType) {
         switch (boType) {
             case ADMIN:
-                //return new AdminBOImpl();
+                return new AdminBOImpl();
             case ALBUM_DETAIL:
-                // return new AlbumDetailBOImpl();
-                break;
+                 return new AlbumDetailBOImpl();
             case ASSISTANT:
-                // return new AssistantBOImpl();
-                break;
+                 return new AssistantBOImpl();
+
             case BOOKING:
-                // return new BookingBOImpl();
-                break;
+                 return new BookingBOImpl();
+
             case CUSTOMER:
-                // return new CustomerBOImpl();
-                break;
+                 return new CustomerBOImpl();
+
             case INVOICE:
-                // return new InvoiceBOImpl();
-                break;
+                 return new InvoiceBOImpl();
+
             case ITEM:
-                // return new ItemBOImpl();
-                break;
+                 return new ItemBOImpl();
+
             case PAYMENT:
-                // return new PaymentBOImpl();
-                break;
+                 return new PaymentBOImpl();
+
             case PHOTO_ALBUM:
-                // return new PhotoAlbumBOImpl();
-                break;
+                 return new PhotoAlbumBOImpl();
+
             case PHOTOGRAPHER:
-                // return new PhotographerBOImpl();
-                break;
+                 return new PhotographerBOImpl();
+
             case PHOTO_SESSION:
-                // return new PhotoSessionBOImpl();
-                break;
+                 return new PhotoSessionBOImpl();
+
             case PHOTO_STORAGE:
-                // return new PhotoStorageBOImpl();
-                break;
+                 return new PhotoStorageBOImpl();
+
             case SUPPLIER:
-                // return new SupplierBOImpl();
-                break;
+                 return new SupplierBOImpl();
+
             case VIDEOGRAPHER:
-                // return new VideographerBOImpl();
-                break;
+                 return new VideographerBOImpl();
+
             case VIDEO_SESSION:
-                // return new VideoSessionBOImpl();
-                break;
+                 return new VideoSessionBOImpl();
+
             default:
-                throw new IllegalArgumentException("Invalid BO type");
+                return null;
         }
-        throw new UnsupportedOperationException("BO implementation not found for: " + boType);
     }
 }
