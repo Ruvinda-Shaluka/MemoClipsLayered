@@ -7,6 +7,7 @@ import javafx.scene.control.ButtonType;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.AnchorPane;
 import lk.ijse.memoclipsinlayered.bo.BOFactory;
+import lk.ijse.memoclipsinlayered.bo.EmailUtil;
 import lk.ijse.memoclipsinlayered.bo.custom.AdminBO;
 import lk.ijse.memoclipsinlayered.dao.SQLUtil;
 import lk.ijse.memoclipsinlayered.dto.AdminDto;

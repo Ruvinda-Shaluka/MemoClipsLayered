@@ -13,4 +13,6 @@ module lk.ijse.memoclipsinlayered {
 
     exports lk.ijse.memoclipsinlayered;
     exports lk.ijse.memoclipsinlayered.controller;
+    exports lk.ijse.memoclipsinlayered.bo;
+    opens lk.ijse.memoclipsinlayered.bo to javafx.fxml;
 }

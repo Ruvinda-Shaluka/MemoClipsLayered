@@ -1,4 +1,4 @@
-package lk.ijse.memoclipsinlayered.controller;
+package lk.ijse.memoclipsinlayered.bo;
 
 import jakarta.mail.*;
 import jakarta.mail.internet.InternetAddress;
