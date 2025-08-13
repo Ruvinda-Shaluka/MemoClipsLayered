@@ -67,7 +67,7 @@ public class AlbumDetailDAOImpl implements AlbumDetailsDAO {
                     String.valueOf(rs.getInt("paperQuantity"))
             ));
         }
-        return null;
+        return list;
     }
 
     @Override

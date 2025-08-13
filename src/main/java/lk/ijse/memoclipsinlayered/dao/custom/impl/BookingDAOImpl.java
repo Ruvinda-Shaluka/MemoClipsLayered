@@ -71,7 +71,7 @@ public class BookingDAOImpl implements BookingDAO {
                     rs.getString("status")
             ));
         }
-        return null;
+        return bookings;
     }
 
     @Override
