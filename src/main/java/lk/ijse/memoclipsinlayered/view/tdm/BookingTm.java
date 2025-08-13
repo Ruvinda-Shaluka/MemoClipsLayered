@@ -10,7 +10,7 @@ import lombok.NoArgsConstructor;
 
 
 
-public class BookingTm{
+public class BookingTm implements Comparable<BookingTm> {
     private String bookingId;
     private String customerId;
     private String date;
@@ -18,4 +18,9 @@ public class BookingTm{
     private String location;
     private String bookingType;
     private String bookingStatus;
+
+    @Override
+    public int compareTo(BookingTm o) {
+        return bookingId.compareTo(o.getBookingId());
+    }
 }

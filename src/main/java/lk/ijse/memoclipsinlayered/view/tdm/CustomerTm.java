@@ -7,12 +7,17 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @Data
 
-public class CustomerTm {
+public class CustomerTm implements Comparable<CustomerTm> {
     private String customerId;
     private String customerName;
     private String contactNo;
     private String address;
     private String email;
     private String adminId;
+
+    @Override
+    public int compareTo(CustomerTm o) {
+        return customerId.compareTo(o.getCustomerId());
+    }
 }
 

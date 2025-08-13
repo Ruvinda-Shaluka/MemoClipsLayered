@@ -1,4 +1,6 @@
 package lk.ijse.memoclipsinlayered.dao.custom.impl;
 
-public class VideoSessionDAOImpl {
+import lk.ijse.memoclipsinlayered.dao.custom.VideoSessionDAO;
+
+public class VideoSessionDAOImpl implements VideoSessionDAO {
 }

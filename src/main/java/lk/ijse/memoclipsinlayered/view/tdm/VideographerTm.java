@@ -8,7 +8,7 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @Data
 
-public class VideographerTm {
+public class VideographerTm implements Comparable<VideographerTm> {
 
     private String videographerId;
     private String name;
@@ -16,4 +16,8 @@ public class VideographerTm {
     private String availability;
 
 
+    @Override
+    public int compareTo(VideographerTm o) {
+        return videographerId.compareTo(o.getVideographerId());
+    }
 }

@@ -1,4 +1,6 @@
 package lk.ijse.memoclipsinlayered.dao.custom.impl;
 
-public class PhotoStorageDAOImpl {
+import lk.ijse.memoclipsinlayered.dao.custom.PhotoStorageDAO;
+
+public class PhotoStorageDAOImpl implements PhotoStorageDAO {
 }

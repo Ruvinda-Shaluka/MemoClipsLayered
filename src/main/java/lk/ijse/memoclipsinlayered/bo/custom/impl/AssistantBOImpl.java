@@ -1,4 +1,6 @@
 package lk.ijse.memoclipsinlayered.bo.custom.impl;
 
-public class AssistantBOImpl {
+import lk.ijse.memoclipsinlayered.bo.custom.AssistantBO;
+
+public class AssistantBOImpl implements AssistantBO {
 }

@@ -13,7 +13,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="ancSignUp" prefHeight="700.0" prefWidth="1400.0" style="-fx-background-color: FDB777;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.memoclips.controller.SignUpPageController">
+<AnchorPane fx:id="ancSignUp" prefHeight="700.0" prefWidth="1400.0" style="-fx-background-color: FDB777;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.memoclipsinlayered.controller.SignUpPageController">
    <children>
       <HBox layoutX="191.0" layoutY="144.0" prefHeight="100.0" prefWidth="200.0" style="-fx-background-color: #fff; -fx-background-radius: 10;" AnchorPane.bottomAnchor="90.0" AnchorPane.leftAnchor="300.0" AnchorPane.rightAnchor="300.0" AnchorPane.topAnchor="90.0">
          <children>

@@ -1,4 +1,6 @@
 package lk.ijse.memoclipsinlayered.bo.custom.impl;
 
-public class SupplierBOImpl {
+import lk.ijse.memoclipsinlayered.bo.custom.SupplierBO;
+
+public class SupplierBOImpl implements SupplierBO {
 }

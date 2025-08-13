@@ -8,9 +8,14 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @Data
 
-public class SupplierTm {
+public class SupplierTm implements Comparable<SupplierTm> {
     private String supplierId;
     private String name;
     private String contact;
     private String supplyQuantity;
+
+    @Override
+    public int compareTo(SupplierTm o) {
+        return supplierId.compareTo(o.getSupplierId());
+    }
 }

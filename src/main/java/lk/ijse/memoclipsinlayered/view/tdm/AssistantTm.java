@@ -8,11 +8,15 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @Data
 
-public class AssistantTm {
+public class AssistantTm implements Comparable<AssistantTm> {
     private String assistantId;
     private String assistantName;
     private String photographerId;
     private String availability;
 
 
+    @Override
+    public int compareTo(AssistantTm o) {
+        return assistantId.compareTo(o.assistantId);
+    }
 }

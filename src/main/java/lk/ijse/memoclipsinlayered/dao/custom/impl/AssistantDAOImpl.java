@@ -1,4 +1,6 @@
 package lk.ijse.memoclipsinlayered.dao.custom.impl;
 
-public class AssistantDAOImpl {
+import lk.ijse.memoclipsinlayered.dao.custom.AssistantDAO;
+
+public class AssistantDAOImpl implements AssistantDAO {
 }

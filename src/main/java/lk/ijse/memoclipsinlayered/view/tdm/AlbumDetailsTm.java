@@ -8,7 +8,7 @@ import lombok.NoArgsConstructor;
 @Data
 
 
-public class AlbumDetailsTm {
+public class AlbumDetailsTm implements Comparable<AlbumDetailsTm> {
     private String detailId;
     private String albumId;
     private String numberOfPhotos;
@@ -16,4 +16,8 @@ public class AlbumDetailsTm {
     private String size;
     private String paperQuantity;
 
+    @Override
+    public int compareTo(AlbumDetailsTm o) {
+        return detailId.compareTo(o.detailId);
+    }
 }

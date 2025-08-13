@@ -1,4 +1,6 @@
 package lk.ijse.memoclipsinlayered.dao.custom.impl;
 
-public class CustomerDAOImpl {
+import lk.ijse.memoclipsinlayered.dao.custom.CustomerDAO;
+
+public class CustomerDAOImpl implements CustomerDAO {
 }

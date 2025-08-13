@@ -9,11 +9,16 @@ import lombok.NoArgsConstructor;
 @Data
 
 
-public class PhotoSessionTm {
+public class PhotoSessionTm implements Comparable<PhotoSessionTm> {
 
     private String sessionId;
     private String bookingId;
     private String photographerId;
     private String sessionType;
     private String duration;
+
+    @Override
+    public int compareTo(PhotoSessionTm o) {
+        return sessionId.compareTo(o.getSessionId());
+    }
 }

@@ -1,4 +1,6 @@
 package lk.ijse.memoclipsinlayered.dao.custom.impl;
 
-public class PaymentDAOImpl {
+import lk.ijse.memoclipsinlayered.dao.custom.PaymentDAO;
+
+public class PaymentDAOImpl implements PaymentDAO {
 }

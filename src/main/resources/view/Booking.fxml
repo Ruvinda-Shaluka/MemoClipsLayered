@@ -12,7 +12,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="600.0" prefWidth="1200.0" style="-fx-background-color: #fff;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.memoclips.controller.BookingPageController">
+<AnchorPane prefHeight="600.0" prefWidth="1200.0" style="-fx-background-color: #fff;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.memoclipsinlayered.controller.BookingPageController">
     <children>
         <VBox layoutX="18.0" layoutY="-16.0" prefHeight="979.0" prefWidth="414.0" style="-fx-border-radius: 25px;" AnchorPane.bottomAnchor="37.59999999999991" AnchorPane.leftAnchor="18.0" AnchorPane.topAnchor="-16.0">
             <children>

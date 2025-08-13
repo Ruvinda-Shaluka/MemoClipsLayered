@@ -1,4 +1,6 @@
 package lk.ijse.memoclipsinlayered.bo.custom.impl;
 
-public class VideoSessionBOImpl {
+import lk.ijse.memoclipsinlayered.bo.custom.VideoSessionBO;
+
+public class VideoSessionBOImpl implements VideoSessionBO {
 }

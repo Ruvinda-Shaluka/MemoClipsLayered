@@ -9,12 +9,16 @@ import lombok.NoArgsConstructor;
 @Data
 
 
-public class PhotoAlbumTm {
+public class PhotoAlbumTm implements Comparable<PhotoAlbumTm> {
 
     private String albumId;
     private String bookingId;
     private String albumType;
     private String price;
 
+    @Override
+    public int compareTo(PhotoAlbumTm o) {
+        return albumId.compareTo(o.getAlbumId());
+    }
 }
 

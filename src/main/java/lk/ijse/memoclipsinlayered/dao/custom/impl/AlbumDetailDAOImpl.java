@@ -1,4 +1,6 @@
 package lk.ijse.memoclipsinlayered.dao.custom.impl;
 
-public class AlbumDetailDAOImpl {
+import lk.ijse.memoclipsinlayered.dao.custom.AlbumDetailsDAO;
+
+public class AlbumDetailDAOImpl implements AlbumDetailsDAO {
 }

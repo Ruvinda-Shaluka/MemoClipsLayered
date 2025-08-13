@@ -1,4 +1,6 @@
 package lk.ijse.memoclipsinlayered.bo.custom.impl;
 
-public class BookingBOImpl {
+import lk.ijse.memoclipsinlayered.bo.custom.BookingBO;
+
+public class BookingBOImpl implements BookingBO {
 }

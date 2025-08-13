@@ -1,4 +1,6 @@
 package lk.ijse.memoclipsinlayered.dao.custom.impl;
 
-public class BookingDAOImpl {
+import lk.ijse.memoclipsinlayered.dao.custom.BookingDAO;
+
+public class BookingDAOImpl implements BookingDAO {
 }

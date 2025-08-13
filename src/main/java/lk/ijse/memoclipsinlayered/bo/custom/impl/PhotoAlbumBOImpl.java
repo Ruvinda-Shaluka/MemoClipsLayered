@@ -1,4 +1,6 @@
 package lk.ijse.memoclipsinlayered.bo.custom.impl;
 
-public class PhotoAlbumBOImpl {
+import lk.ijse.memoclipsinlayered.bo.custom.PhotoAlbumBO;
+
+public class PhotoAlbumBOImpl implements PhotoAlbumBO {
 }

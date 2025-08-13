@@ -10,10 +10,15 @@ import lombok.NoArgsConstructor;
 
 
 
-public class ItemTm {
+public class ItemTm implements Comparable<ItemTm>{
     private String itemId;
     private String itemName;
     private String quantity;
     private String lastUpdateDate;
     private String supplierId;
+
+    @Override
+    public int compareTo(ItemTm o) {
+        return itemId.compareTo(o.getItemId());
+    }
 }

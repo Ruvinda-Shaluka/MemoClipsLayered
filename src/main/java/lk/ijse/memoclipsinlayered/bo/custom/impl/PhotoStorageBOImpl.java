@@ -1,4 +1,6 @@
 package lk.ijse.memoclipsinlayered.bo.custom.impl;
 
-public class PhotoStorageBOImpl {
+import lk.ijse.memoclipsinlayered.bo.custom.PhotoStorageBO;
+
+public class PhotoStorageBOImpl implements PhotoStorageBO {
 }

@@ -1,4 +1,6 @@
 package lk.ijse.memoclipsinlayered.dao.custom.impl;
 
-public class SupplierDAOImpl {
+import lk.ijse.memoclipsinlayered.dao.custom.SupplierDAO;
+
+public class SupplierDAOImpl implements SupplierDAO {
 }

@@ -1,4 +1,6 @@
 package lk.ijse.memoclipsinlayered.dao.custom.impl;
 
-public class AdminDAOImpl {
+import lk.ijse.memoclipsinlayered.dao.custom.AdminDAO;
+
+public class AdminDAOImpl implements AdminDAO {
 }

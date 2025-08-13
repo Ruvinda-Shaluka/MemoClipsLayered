@@ -1,4 +1,6 @@
 package lk.ijse.memoclipsinlayered.bo.custom.impl;
 
-public class VideographerBOImpl {
+import lk.ijse.memoclipsinlayered.bo.custom.VideographerBO;
+
+public class VideographerBOImpl implements VideographerBO {
 }

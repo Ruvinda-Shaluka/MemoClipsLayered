@@ -1,4 +1,6 @@
 package lk.ijse.memoclipsinlayered.dao.custom.impl;
 
-public class PhotographerDAOImpl {
+import lk.ijse.memoclipsinlayered.dao.custom.PhotographerDAO;
+
+public class PhotographerDAOImpl implements PhotographerDAO {
 }

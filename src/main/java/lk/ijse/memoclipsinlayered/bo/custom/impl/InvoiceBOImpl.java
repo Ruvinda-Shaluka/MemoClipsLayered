@@ -1,4 +1,6 @@
 package lk.ijse.memoclipsinlayered.bo.custom.impl;
 
-public class InvoiceBOImpl {
+import lk.ijse.memoclipsinlayered.bo.custom.InvoiceBO;
+
+public class InvoiceBOImpl implements InvoiceBO {
 }
