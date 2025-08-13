@@ -37,7 +37,7 @@ public class ItemDAOImpl implements ItemDAO {
     }
 
     @Override
-    public Object search(String id) throws SQLException, ClassNotFoundException {
+    public ArrayList search(String id) throws SQLException, ClassNotFoundException {
         return null;
     }
 }

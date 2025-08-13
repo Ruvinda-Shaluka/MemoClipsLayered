@@ -37,7 +37,7 @@ public class PhotographerDAOImpl implements PhotographerDAO {
     }
 
     @Override
-    public Object search(String id) throws SQLException, ClassNotFoundException {
+    public ArrayList search(String id) throws SQLException, ClassNotFoundException {
         return null;
     }
 }

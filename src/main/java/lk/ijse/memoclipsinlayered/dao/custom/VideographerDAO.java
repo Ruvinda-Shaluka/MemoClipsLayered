@@ -1,6 +1,7 @@
 package lk.ijse.memoclipsinlayered.dao.custom;
 
 import lk.ijse.memoclipsinlayered.dao.CrudDAO;
+import lk.ijse.memoclipsinlayered.entity.VideographerEntity;
 
-public interface VideographerDAO extends CrudDAO {
+public interface VideographerDAO extends CrudDAO<VideographerEntity> {
 }

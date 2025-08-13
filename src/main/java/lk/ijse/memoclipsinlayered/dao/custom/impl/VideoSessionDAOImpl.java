@@ -38,7 +38,7 @@ public class VideoSessionDAOImpl implements VideoSessionDAO {
     }
 
     @Override
-    public Object search(String id) throws SQLException, ClassNotFoundException {
+    public ArrayList search(String id) throws SQLException, ClassNotFoundException {
         return null;
     }
 }
